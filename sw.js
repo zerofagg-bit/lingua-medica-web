@@ -1,11 +1,11 @@
-/* Lingua Medica — офлайн-оболочка PWA. */
+﻿/* Lingua Medica вЂ” РѕС„Р»Р°Р№РЅ-РѕР±РѕР»РѕС‡РєР° PWA. */
 const CACHE = 'lingua-medica-v1';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches
       .open(CACHE)
-      .then((cache) => cache.addAll(['/', '/manifest.webmanifest']))
+      .then((cache) => cache.addAll(['/', '/manifest.json']))
       .then(() => self.skipWaiting()),
   );
 });
@@ -41,3 +41,4 @@ self.addEventListener('fetch', (event) => {
     }),
   );
 });
+
